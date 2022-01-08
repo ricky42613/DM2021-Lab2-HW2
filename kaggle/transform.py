@@ -17,8 +17,8 @@ sample = {
 def preprocess(content: str):
     content = content.replace('<LH>','')
     content = content.lower()
-    content = re.sub(r'@[a-zA-Z0-9]+', '', content)
-    content = re.sub(r'[^a-zA-Z\s]+', ' ', content)
+    # content = re.sub(r'@[a-zA-Z0-9]+', '', content)
+    # content = re.sub(r'[^a-zA-Z\s]+', ' ', content)
     content = re.sub(r'[\s]+', ' ', content)
     return content
 

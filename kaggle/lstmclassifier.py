@@ -63,13 +63,6 @@ if __name__ == '__main__':
     print(vocab_size)
 
     w2v = KeyedVectors.load_word2vec_format('GoogleNews-vectors-negative300.bin.gz',binary = True)
-    # embedding_matrix = np.zeros((vocab_size, 300))
-    # for w, index in tok.word_index.items():
-    #     try:
-    #         embedding_matrix[index, :] = w2v[w]
-    #     except:
-    #         pass
-
     first_X = process_text(first_X)
     first_X = np.array(first_X)
     first_Y = np.array(first_Y,dtype="int32")
